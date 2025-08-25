@@ -154,5 +154,28 @@ API security is crucial for protecting user data, preventing fraud, and ensuring
 - Encrypt sensitive data like payment details.
 - Enforce HTTPS for secure communication.
 
+# Task 6: CI/CD Pipeline Overview
+
+CI/CD (Continuous Integration / Continuous Deployment) ensures the Airbnb Clone is tested, validated, and deployed automatically.
+
+## What is CI/CD?
+- **Continuous Integration**: Automatically test and validate code whenever changes are pushed.
+- **Continuous Deployment**: Automatically release code to production once it passes all tests.
+
+## Why CI/CD Matters
+- Improves collaboration across teams.
+- Reduces manual errors during deployment.
+- Speeds up delivery cycles.
+
+## Tools for CI/CD
+- **GitHub Actions**: Automate testing and deployment workflows.
+- **Docker**: Package application into portable containers.
+- **Cloud Platforms**: Deploy containers on AWS, GCP, or Heroku.
+
+## Workflow Example
+1. Developer pushes code to GitHub.  
+2. GitHub Actions runs automated tests.  
+3. If tests pass → Build Docker image.  
+4. Deploy Docker image to cloud environment.  
 
 
