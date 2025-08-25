@@ -51,3 +51,52 @@ The Airbnb Clone project uses a modern stack to ensure scalability, maintainabil
 - **Docker**: A containerization tool to package applications and ensure consistent environments across development, testing, and production.
 - **GitHub Actions**: CI/CD automation tool used to run tests, lint code, and deploy the application automatically on code changes.
 
+# Task 3: Database Design Overview
+
+The database is the foundation of the Airbnb Clone. Below is an overview of the main entities and their relationships.
+
+## Entities and Fields
+
+### 1. Users
+- `id`: Primary key
+- `name`: Full name
+- `email`: Unique user email
+- `password`: Hashed password
+- `role`: Guest, Host, or Admin
+
+### 2. Properties
+- `id`: Primary key
+- `title`: Property title
+- `description`: Property details
+- `location`: Address/City
+- `price`: Price per night
+- `owner_id`: References Users(id)
+
+### 3. Bookings
+- `id`: Primary key
+- `user_id`: References Users(id)
+- `property_id`: References Properties(id)
+- `start_date`: Booking start
+- `end_date`: Booking end
+- `total_price`: Calculated total
+
+### 4. Reviews
+- `id`: Primary key
+- `booking_id`: References Bookings(id)
+- `user_id`: References Users(id)
+- `rating`: Numeric score
+- `comment`: Review text
+
+### 5. Payments
+- `id`: Primary key
+- `booking_id`: References Bookings(id)
+- `amount`: Transaction amount
+- `status`: Pending, Completed, Failed
+- `method`: Credit card, PayPal, etc.
+
+## Relationships
+- A **User** can own multiple **Properties**.
+- A **User** can make multiple **Bookings**.
+- A **Booking** belongs to one **User** and one **Property**.
+- A **Review** belongs to one **Booking**.
+- A **Payment** belongs to one **Booking**.
