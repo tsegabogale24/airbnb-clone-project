@@ -128,5 +128,31 @@ The Airbnb Clone project will include the following features:
 - Secure payment processing for bookings.
 - Integration with external payment gateways.
 - View transaction history.
+# Task 5: API Security Overview
+
+API security is crucial for protecting user data, preventing fraud, and ensuring the reliability of the Airbnb Clone.
+
+## Key Security Measures
+
+### 1. Authentication
+- Use JWT (JSON Web Tokens) for secure login.
+- Sessions managed with expiration to reduce risk.
+
+### 2. Authorization
+- Role-based access control (Admin, Host, Guest).
+- Restrict actions based on role (e.g., only hosts can create properties).
+
+### 3. Input Validation & Sanitization
+- Prevent SQL injection, XSS, and CSRF.
+- Validate all user inputs on both client and server side.
+
+### 4. Rate Limiting
+- Throttle API requests to prevent abuse and denial-of-service (DoS) attacks.
+
+### 5. Data Protection
+- Hash and salt passwords before storage.
+- Encrypt sensitive data like payment details.
+- Enforce HTTPS for secure communication.
+
 
 
